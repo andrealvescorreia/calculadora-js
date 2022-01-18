@@ -2,18 +2,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* o 'before' e o 'after' são usados para adicionar conteudo antes ou depois de um elemento qualquer.*/
-*, *::before, *::after {
+* /*, *::before, *::after*/ {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /**/
-    /*text-decoration: none;/* sem decorações*/
+    
+    box-sizing: border-box;
 
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
+    font-weight:bold;
 }
 
 body{
-    
+    margin: 0;
+    padding: 0;
     background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.calculadora-grid{
+
+    display: grid;
+    justify-content: center;
+    align-items: normal;
+
+    min-height: 100vh;/*a grid vai sempre ocupar 100% (ou mais) da tela verticalmente, não importa o tamanho dela (zoom)*/
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculadora-grid > button{/* estilo é aplicado apenas ao botões presentes na calculadora*/
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;/*tira o outline criado automaticamente pelo html.*/
+    background-color: rgba(255,255,255,.75);/*branco com 75% de opacidade.*/
+}
+.calculadora-grid > button:hover{
+    background-color: rgba(255,255,255,.90);/* ao passar o mouse por cima de um botão, ele ficará com 90% de opacidade. */
+}
+
+.calculadora-grid-tamanho-dois{
+    grid-column: span 2;/*faz com que os botões de tamanho 2 realmente ocupem dois espaços de largura (colunas na grid)*/
+}
+.calculadora-grid-output{
+    /*grid column: start / end */
+    grid-column: 1 / -1; /*o cupa o espaço da primeira coluna até a ultima*/
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    align-items: flex-end;/*itens ficam no final no flex*/
+    justify-content: space-around;/*os itens ficam distribuidos igualmente*/
+    flex-direction: column;/*itens ficam alinhados verticalemnte, ao invez de horizontalemnte*/
+    padding: 10px;
+
+    word-wrap: break-word;/* faz com que os numeros tenham quebra de linha se forem grandes demais.*/
+    word-break: break-all;
+
+
+}
+
+.calculadora-grid-output .operador-anterior{
+    color: rgba(255,255,255,.75);
+    font-size: 1.5rem;
+}
+.calculadora-grid-output .operador-atual{
+    color: white;
+    font-size: 2.5rem;
 }
