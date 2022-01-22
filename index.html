@@ -10,30 +10,31 @@
 <body>
     <div class="calculadora-grid">
         <div class="calculadora-grid-output">
-            <div class = "operador-anterior">123 +</div>
-            <div class = "operador-atual">669</div>
+            <div data-operador-anterior class = "operador-anterior">123 +</div>
+            <div data-operador-atual class = "operador-atual">669</div>
         </div>
-        <button class="calculadora-grid-tamanho-dois">
-            CE
+        <button data-limpar class="calculadora-grid-tamanho-dois">
+            AC
         </button>
-
-        <button>DEL</button>
-        <button>÷</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>-</button>
-        <button>.</button>
-        <button>0</button>
-        <button class="calculadora-grid-tamanho-dois">
+        <!-- 'A razão na qual uso data-atributes ao invés de classes, 
+            é pq é mais fácil de ver quais partes do html são usadas pela javascript e quais pelo css.' -->
+        <button data-deletar>DEL</button>
+        <button data-operacao>÷</button>
+        <button data-numero>1</button>
+        <button data-numero>2</button>
+        <button data-numero>3</button>
+        <button data-operacao>*</button>
+        <button data-numero>4</button>
+        <button data-numero>5</button>
+        <button data-numero>6</button>
+        <button data-operacao>+</button>
+        <button data-numero>7</button>
+        <button data-numero>8</button>
+        <button data-numero>9</button>
+        <button data-operacao>-</button>
+        <button data-numero>.</button>
+        <button data-numero>0</button>
+        <button data-igual class="calculadora-grid-tamanho-dois">
             =
         </button>
     </div>
