@@ -1,17 +1,21 @@
+<!-- original tutorial video 'Build A Calculator With JavaScript Tutorial' from 'Web Dev Simplified': 
+    https://www.youtube.com/watch?v=j59qQ7YWLxw-->
+
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer> </script><!-- o script será carregado apenas após todos os elementos da página forem carregados.-->
+    <script src="script.js" defer></script> <!--o script será carregado apenas após todos os elementos da página forem carregados.-->
 </head>
+
 <body>
     <div class="calculadora-grid">
         <div class="calculadora-grid-output">
-            <div data-operador-anterior class = "operador-anterior">123 +</div>
-            <div data-operador-atual class = "operador-atual">669</div>
+            <div data-operador-anterior class = "operador-anterior"> </div>
+            <div data-operador-atual class = "operador-atual"> </div>
         </div>
         <button data-limpar class="calculadora-grid-tamanho-dois">
             AC
@@ -38,5 +42,7 @@
             =
         </button>
     </div>
+
+    <!--<script src="script.js"></script> -->
 </body>
 </html>
