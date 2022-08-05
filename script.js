@@ -184,3 +184,45 @@ botaoDeletar.addEventListener("click", ()=>{
     calculadora.deletar()
     calculadora.updateDisplay()
 })
+
+
+
+// Executa uma funcao quando o usuario presiona uma tecla do teclado.
+document.addEventListener("keypress", function(event) {
+    keypressed = event.key;
+
+    
+    if(keypressed === "=" || keypressed === "Enter"){
+        botaoIgual.click();
+        return;
+    }
+
+    for (i = 0; i < botoesNumeros.length; i++) {
+        if(keypressed === botoesNumeros[i].innerText){
+            botoesNumeros[i].click();
+            return;
+        } 
+    }
+
+    for (i = 0; i < botoesOperacoes.length; i++) {
+        if(keypressed === botoesOperacoes[i].innerText){
+            botoesOperacoes[i].click();
+            return;
+        } else if(keypressed ==="/" && botoesOperacoes[i].innerText === "÷"){
+            botoesOperacoes[i].click();
+            return;
+        }
+    } 
+
+});
+
+
+
+document.addEventListener("keydown", function(event) {
+    keypresseddown = event.key;
+  
+    if(keypresseddown === "Backspace" || keypresseddown === "Delete"){
+        botaoDeletar.click();
+        return;
+    }
+});

@@ -44,7 +44,7 @@ body{
 }
 .calculadora-grid-output{
     /*grid column: start / end */
-    grid-column: 1 / -1; /*o cupa o espaço da primeira coluna até a ultima*/
+    grid-column: 1 / -1; /*ocupa o espaço da primeira coluna até a ultima*/
     background-color: rgba(0,0,0,.5);
     display: flex;
     align-items: flex-end;/*itens ficam no final no flex*/
